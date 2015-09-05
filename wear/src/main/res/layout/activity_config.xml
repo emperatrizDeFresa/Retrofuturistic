@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical"
+    tools:context="emperatriz.sveti.ConfigColor" tools:deviceIds="wear_square">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#00ffbb"
+        android:gravity="center"
+        android:layout_height="50dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/configuration"
+            android:textColor="#ffffff"
+            android:textSize="24dp"
+            android:fontFamily="sans-serif-condensed"
+            android:id="@+id/textView" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:background="#ffffff"
+        android:layout_gravity="center_horizontal">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/color"
+                android:padding="5dp"
+                >
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/circle"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/circleb"
+                    android:padding="4dp"
+                    android:id="@+id/colorImg"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/color"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center_vertical"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/thick"
+                >
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/circle"
+                    android:id="@+id/thickImg"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/circleb"
+                    android:padding="4dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/thick"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center_vertical"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/round"
+                >
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/circle"
+                    android:id="@+id/roundImg"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/circleb"
+                    android:padding="4dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/round"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"></LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

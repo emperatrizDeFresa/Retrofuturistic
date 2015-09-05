@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Sveti</string>
+    <string name="my_digital_name">My Digital</string>
+    <string name="title_activity_config">Config</string>
+    <string name="background">Background</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="seconds">Seconds</string>
+    <string name="date">Date</string>
+    <string name="colors">COLORS</string>
+    <string name="configuration">OPTIONS</string>
+    <string name="color">Color</string>
+    <string name="thick">Thickness</string>
+    <string name="thick2">THICKNESS</string>
+    <string name="round">Roundness</string>
+    <string name="round2">ROUNDNESS</string>
+    <string name="title_activity_thick">Thick</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
+</resources>

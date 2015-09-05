@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Sveti</string>
+    <string name="my_digital_name">RetroFuturistic</string>
+    <string name="title_activity_config">Config</string>
+    <string name="background">Fondo</string>
+    <string name="hours">Horas</string>
+    <string name="minutes">Minutos</string>
+    <string name="seconds">Segundos</string>
+    <string name="date">Fecha</string>
+    <string name="colors">COLORES</string>
+    <string name="configuration">OPCIONES</string>
+    <string name="thick2">GROSOR</string>
+    <string name="color">Color</string>
+    <string name="thick">Grosor</string>
+    <string name="round">Redondeo</string>
+    <string name="round2">REDONDEO</string>
+
+</resources>
