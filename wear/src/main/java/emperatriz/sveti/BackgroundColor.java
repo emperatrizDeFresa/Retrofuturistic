@@ -25,8 +25,7 @@ public class BackgroundColor extends Activity {
         setContentView(R.layout.activity_background_color);
 
         SharedPreferences preferences = getSharedPreferences("sveti", MODE_PRIVATE);
-        selected = preferences.getString("selected","");
-        if(selected.length()==0) finish();
+
         selected = ConfigColor.SECONDS;
 
         int color = preferences.getInt(selected,0xffffffff);

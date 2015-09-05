@@ -37,7 +37,6 @@ import android.view.SurfaceHolder;
 import android.view.WindowInsets;
 
 import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
 import java.util.TimeZone;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -232,18 +231,6 @@ public class SvetiWatchFace extends CanvasWatchFaceService {
         @Override
         public void onAmbientModeChanged(boolean inAmbientMode) {
             super.onAmbientModeChanged(inAmbientMode);
-//            if (mAmbient != inAmbientMode) {
-//                mAmbient = inAmbientMode;
-//                if (mLowBitAmbient) {
-//                    mTextPaint.setAntiAlias(!inAmbientMode);
-//                }
-//                invalidate();
-//            }
-//
-//            // Whether the timer should be running depends on whether we're visible (as well as
-//            // whether we're in ambient mode), so we may need to start or stop the timer.
-//            updateTimer();
-//            invalidate();
 
             if (!inAmbientMode){
                 PowerManager powerManager = (PowerManager) getSystemService(POWER_SERVICE);
@@ -264,13 +251,12 @@ public class SvetiWatchFace extends CanvasWatchFaceService {
 
 
             DrawUtils.now = System.currentTimeMillis();
-//            DrawUtils.mTime.set(DrawUtils.now);
             DrawUtils.height = bounds.height();
             DrawUtils.width = bounds.width();
-//            DrawUtils,chunk = DrawUtils.width/10;
             DrawUtils.canvas = canvas;
             DrawUtils.isInAmbientMode = isInAmbientMode();
             DrawUtils.ctx = getApplicationContext();
+            DrawUtils.p20 = bounds.width()/20;
 
             SharedPreferences preferences = getSharedPreferences("sveti", MODE_PRIVATE);
 
@@ -284,21 +270,16 @@ public class SvetiWatchFace extends CanvasWatchFaceService {
 
             int dateColor = preferences.getInt(ConfigColor.DATE, 0xffffffff);
 
-            DrawUtils.dateThick = preferences.getInt(ConfigThick.DATE, 2);
-            DrawUtils.hourThick = preferences.getInt(ConfigThick.HOURS, 2);
-            DrawUtils.minThick = preferences.getInt(ConfigThick.MINUTES, 6);
-            DrawUtils.thick = preferences.getInt(ConfigThick.SECONDS, 20);
 
 
             DrawUtils.drawBackground(backgroundColor, new Paint());
 
 
-            DrawUtils.drawSeconds(preferences.getInt(ConfigRound.SECONDS, 50), secondsColor);
+            DrawUtils.drawSeconds(secondsColor);
             DecimalFormat df = new DecimalFormat("00");
             DrawUtils.drawCenteredText(df.format(DrawUtils.mTime.hour)+":"+df.format(DrawUtils.mTime.minute),mTextPaint);
-//            DrawUtils.drawHours(hoursColor, preferences.getInt(ConfigRound.HOURS, 50), backgroundColor);
-//            DrawUtils.drawMinutes(minutesColor, preferences.getInt(ConfigRound.MINUTES, 50), backgroundColor);
-            DrawUtils.drawDate(preferences.getInt(ConfigRound.DATE, 10), dateColor, backgroundColor, mTextPaint2);
+
+            DrawUtils.drawDate(dateColor, mTextPaint2);
 
 
             if (isVisible() && !isInAmbientMode()) {

@@ -41,11 +41,6 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity
-            android:name=".Config"
-            android:label="@string/title_activity_config" >
-
-        </activity>
         <activity android:name=".BackgroundColor" >
             <intent-filter>
                 <action android:name="com.example.android.wearable.watchface.CONFIG_DIGITAL" />
@@ -56,16 +51,6 @@
         </activity>
         <activity android:name=".ConfigColor" >
 
-        </activity>
-        <activity android:name=".ConfigThick" >
-        </activity>
-        <activity android:name=".ConfigRound" >
-        </activity>
-        <activity
-            android:name=".Thick">
-        </activity>
-        <activity
-            android:name=".Round">
         </activity>
     </application>
 
